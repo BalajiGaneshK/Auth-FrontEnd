@@ -1,0 +1,25 @@
+@media only screen and (min-device-width:320px) and (max-device-width: 480px) {
+    
+    .registrationForm {
+        position: absolute;
+        left: 0%;
+        top: 20%;
+    }
+}
+
+@media only screen and (min-device-width:800px)  {
+
+    .registrationForm {
+        position: absolute;
+        left: 32%;
+        top: 15%;
+    }
+}
+
+.LoginlinkText {
+
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    text-align: center;
+}

@@ -1,0 +1,44 @@
+/*.loader{
+    z-index:33333333333333;
+    position: absolute;
+    top:33%;
+    left:44%;
+    background-color:blue;
+    color:white;
+}*/
+
+.loader {
+    z-index:33333333333333;
+    position: absolute;
+    top:35%;
+    left:44%;
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading{
+    position: absolute;
+    font-family: arial;
+    font-size:4vh;
+    top:56%;
+    left:45%;
+
+}
+
+
