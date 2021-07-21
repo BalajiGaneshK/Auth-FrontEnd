@@ -88,14 +88,14 @@ const LoginForm = (props) => {
         <form class="needs-validation"  noValidate>
 
   <div className="form-group">
-    <label for="email">Email address:</label>
+    <label for="email">Email address</label>
           <input type="email" className="form-control emailBox" placeholder="Enter email" id="email" onChange={updateLoginForm} required />
                 {validations.invalidEmail!=="" && <p style={{ color: "red" }}>{validations.invalidEmail}</p>}
                  {validations.validEmail!=="" && <p style={{color:"green"}}>{validations.validEmail}</p>}
   </div>
             
   <div className="form-group">
-    <label for="password">Password:</label>
+    <label for="password">Password</label>
     <input type="password" className="form-control passwordBox" placeholder="Enter password" id="password" onChange={updateLoginForm }/>
                 {validations.invalidPassword!=="" && <p style={{ color: "red" }}>{validations.invalidPassword}</p>}
                 {validations.validPassword!=="" && <p style={{ color: "green" }}>{validations.validPassword}</p>}
