@@ -104,7 +104,7 @@
 
 }
 
-@media(min-width:992px) and (max-width:2000px) and (min-height:700px) and (max-height:1999px) {
+@media(min-width:992px)   {
     .loginForm {
 
         display: flex;
@@ -149,7 +149,7 @@
 
 
 /*For Redmi Note 8  and other new phones*/
-@media(min-width:992px) and (max-width:2000px) and (min-height:2000px) {
+/*@media(min-width:992px) and (max-width:2000px) and (min-height:2000px) {
     .loginForm {
 
         display: flex;
@@ -191,4 +191,4 @@
     }
 
 }
-
+*/
