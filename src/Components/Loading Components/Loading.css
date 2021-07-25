@@ -191,7 +191,7 @@ WRITE  min-width: 769px to 2000px for normal height above
     }
 }
 
-@media (min-width:1500px) and (max-width:2000px) {
+@media (min-width:1501px) and (max-width:2000px) {
     .loader {
         z-index: 33333333333333;
         position: absolute;
