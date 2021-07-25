@@ -118,7 +118,7 @@ WRITE  min-width: 769px to 2000px for normal height below
 /* 
 WRITE  min-width: 769px to 2000px for normal height above
 */
-@media (min-height:700px) {
+@media (min-height:650px) {
 @media (min-width:769px) and (max-width:992px) {
     .loader {
         z-index: 33333333333333;
