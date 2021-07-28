@@ -7,7 +7,7 @@ import '../../registrationForm.css';
 
 function RegistrationForm(props) {
     const [regForm, storeRegForm] = useState({ name: "", email: "", city: "", password: "" });
-    useEffect(() => { props.setHeaderTitle("Register") },[])
+    useEffect(() => { props.setHeaderTitle("Register"); localStorage.setItem("loginSuccess", false); },[])
     const handleChange = (e) => {
     
         const {id , value} = e.target   

@@ -24,7 +24,10 @@ const LoginForm = (props) => {
   let [loginFormDisplay, setLoginFormDisplay] = useState({'display':'block'});
   
 
-  useEffect(() => { console.log("Loginform.js- useEffect for \"Login\"header title"); props.setHeaderTitle('Login') }, []);
+  useEffect(() => {
+    console.log("Loginform.js- useEffect for \"Login\"header title"); props.setHeaderTitle('Login');
+    localStorage.setItem("loginSuccess", false);
+  }, []);
   useEffect(() => { console.log("Alert Props", alertProps) }, [alertProps]);
 
   const updateLoginForm = (e) => {
@@ -56,7 +59,7 @@ const LoginForm = (props) => {
       setLoadingDisplay(true);
       try {
         let resp = await axios.post('https://nodemailerauth.herokuapp.com/login', loginForm);
-        console.log("Login successful");
+        localStorage.setItem("loginSuccess", true);
         props.history.push('./main');
       }
       
@@ -64,10 +67,11 @@ const LoginForm = (props) => {
             
       catch (err) {
         //setLoadingDisplay(false);
+        localStorage.setItem("loginSuccess", false);
         setAlertProps({
           shouldDisplay: true,
           content: {
-            modalTitle: "Login Fail",
+            modalTitle: "Login Failed",
             modalBody: "Either UserName or Password is wrong",
             
           }
