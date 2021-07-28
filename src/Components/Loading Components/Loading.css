@@ -155,7 +155,7 @@ WRITE  min-width: 769px to 2000px for normal height above
     }
 }
 
-@media (min-width:993px) and (max-width:1500px) {
+@media  (min-width:993px) and (max-width:1500px) {
     .loader {
         z-index: 33333333333333;
         position: absolute;
@@ -200,6 +200,7 @@ WRITE  min-width: 769px to 2000px for normal height above
         border: 16px solid #f3f3f3;
         /* Light grey */
         border-top: 16px solid #3498db;
+        /*border-top: 16px solid red;*/
         /* Blue */
         border-radius: 50%;
         width: 140px;
