@@ -112,7 +112,7 @@ const LoginForm = (props) => {
         <span className="ReglinkText" onClick={() => { props.setHeaderTitle('Register'); props.history.push('/');}}>Not Registered? Click here to Register!</span>
         </div>
     <Loading shouldDisplay={loadingShouldDisplay} ></Loading>
-    <AlertComponent shouldDisplay={alertProps.shouldDisplay} setAlertProps={setAlertProps} modalContent={Object.assign({},alertProps.content)} setLoginFormDisplay= {setLoginFormDisplay}></AlertComponent>
+    <AlertComponent shouldDisplay={alertProps.shouldDisplay} setAlertProps={setAlertProps} modalContent={Object.assign({},alertProps.content)} setFormDisplay= {setLoginFormDisplay}></AlertComponent>
      
       </div>
 )

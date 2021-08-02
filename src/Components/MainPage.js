@@ -6,10 +6,12 @@ const MainPage =(props)=>{
     useEffect(() => {
         props.setHeaderTitle("main");
         let loginStatus = localStorage.getItem("loginSuccess");
+        let regStatus = localStorage.getItem("regStatus");
         console.log("login status in main", loginStatus);
         
-          if(loginStatus==='false')
+          if(loginStatus==='false' &&  regStatus==='false' )
             props.history.push('/login');
+        
     
     
     }, []);

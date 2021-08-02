@@ -20,7 +20,7 @@ const AlertComponent = (props) => {
         shouldDisplay: false
       });
 
-      props.setLoginFormDisplay({ 'display': 'block' });
+      props.setFormDisplay({ 'display': 'block' });
       
     }
 
