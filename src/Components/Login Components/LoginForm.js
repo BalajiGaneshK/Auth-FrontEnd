@@ -62,6 +62,7 @@ const LoginForm = (props) => {
       try {
         let resp = await axios.post('https://nodemailerauth.herokuapp.com/login', loginForm);
         localStorage.setItem("loginSuccess", true);
+        localStorage.setItem("loggedInUserName",resp.data.userData.name);
         props.history.push('./main');
       }
           

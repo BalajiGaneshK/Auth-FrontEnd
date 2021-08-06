@@ -97,6 +97,7 @@ function RegistrationForm(props) {
           };
            let resp = await axios.post("https://nodemailerauth.herokuapp.com/register", payload);
           localStorage.setItem("regSuccess", true);
+          localStorage.setItem("registeredUserName",resp.data.regUserDetails.name);
            props.history.push('./main');
       }
       

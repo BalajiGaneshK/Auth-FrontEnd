@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 const MainPage = (props) => {
     let [mainPageDisplay, setMainPageDisplay] = useState({ 'display': 'block' });
+    let [loggedInUser, setLoggedInUser] = useState("");
 let [alertProps, setAlertProps] = useState({
     shouldDisplay: false,
     content: {
@@ -38,17 +39,36 @@ let [alertProps, setAlertProps] = useState({
                 }
             });
         }
+
+        if (loginStatus==="true")
+        {
+            setLoggedInUser(localStorage.getItem("loggedInUserName"));
+            localStorage.removeItem("loggedInUserName")
+        }
+        
+        if (regStatus === "true")
+        {
+            setLoggedInUser(localStorage.getItem("registeredUserName"));
+            localStorage.removeItem("registeredUserName")
+
+        }
     
     
     }, []);
     return (
         <div style={mainPageDisplay}>
-        <h1>Welcome To Main Page of this App!!</h1>
+            <span style={{ "color": "blue", "text-decoration": "underline", "margin-left": "60vw" }}
+                onClick={() => {props.history.push('/login') }}>
+                Not {loggedInUser} ? 
+                Login with a Different ID
+            </span>
+        <h1>Welcome to this App {loggedInUser} !!</h1>
             <AlertComponent shouldDisplay={alertProps.shouldDisplay}
                 setAlertProps={setAlertProps}
                 modalContent={Object.assign({}, alertProps.content)}
                 setFormDisplay={setMainPageDisplay}>
             </AlertComponent>
+            
         </div>
     )
 }

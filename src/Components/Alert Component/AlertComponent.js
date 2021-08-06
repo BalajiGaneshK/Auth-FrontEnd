@@ -44,7 +44,7 @@ const AlertComponent = (props) => {
                 <p>{ props.modalContent.modalBody}</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => closeModal()}>Enter Again</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onClick={() => closeModal()}>{ props.modalContent.modalButton}</button>
       </div>
     </div>
   </div>
