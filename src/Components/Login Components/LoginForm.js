@@ -17,7 +17,8 @@ const LoginForm = (props) => {
     content: {
     
       modalTitle: "",
-      modalBody: ""
+      modalBody: "",
+      modalButton:""
     }
   });
   let [loadingShouldDisplay, setLoadingDisplay] = useState(false);
@@ -27,6 +28,7 @@ const LoginForm = (props) => {
   useEffect(() => {
     console.log("Loginform.js- useEffect for \"Login\"header title"); props.setHeaderTitle('Login');
     localStorage.setItem("loginSuccess", false);
+    localStorage.setItem("regSuccess", false);
   }, []);
   useEffect(() => { console.log("Alert Props", alertProps) }, [alertProps]);
 
@@ -62,9 +64,7 @@ const LoginForm = (props) => {
         localStorage.setItem("loginSuccess", true);
         props.history.push('./main');
       }
-      
-      
-            
+          
       catch (err) {
         //setLoadingDisplay(false);
         localStorage.setItem("loginSuccess", false);
@@ -73,7 +73,7 @@ const LoginForm = (props) => {
           content: {
             modalTitle: "Login Failed",
             modalBody: "Either UserName or Password is wrong",
-            
+            modalButton:"Enter Again!"
           }
         });
 

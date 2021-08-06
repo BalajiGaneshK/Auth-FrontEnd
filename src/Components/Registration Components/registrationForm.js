@@ -17,12 +17,13 @@ function RegistrationForm(props) {
     content: {
     
       modalTitle: "",
-      modalBody: ""
+      modalBody: "",
+      modalButton:""
     }
     });
 
     
-    useEffect(() => { props.setHeaderTitle("Register"); localStorage.setItem("regSuccess", false); },[])
+    useEffect(() => { props.setHeaderTitle("Register"); localStorage.setItem("regSuccess", false); localStorage.setItem("loginSuccess", false);},[])
     const handleChange = (e) => {
     
         const { id, value } = e.target
@@ -88,8 +89,14 @@ function RegistrationForm(props) {
       setLoadingDisplay(true);
       try {
         //sendDetailsToServer();
-           let resp = await axios.post("https://nodemailerauth.herokuapp.com/register", regForm);
-           localStorage.setItem("regSuccess", true);
+          let payload = {
+              name: regForm.name,
+              email:regForm.email,
+              city: regForm.city,
+              password: regForm.password
+          };
+           let resp = await axios.post("https://nodemailerauth.herokuapp.com/register", payload);
+          localStorage.setItem("regSuccess", true);
            props.history.push('./main');
       }
       
@@ -103,7 +110,7 @@ function RegistrationForm(props) {
           content: {
             modalTitle: "Registration Failed",
             modalBody: "User Already exists",
-            
+            modalButton:"Enter Again!"
           }
         });
 
