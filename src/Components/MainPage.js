@@ -43,13 +43,13 @@ let [alertProps, setAlertProps] = useState({
         if (loginStatus==="true")
         {
             setLoggedInUser(localStorage.getItem("loggedInUserName"));
-            localStorage.removeItem("loggedInUserName")
+            //localStorage.removeItem("loggedInUserName")
         }
         
         if (regStatus === "true")
         {
             setLoggedInUser(localStorage.getItem("registeredUserName"));
-            localStorage.removeItem("registeredUserName")
+            //localStorage.removeItem("registeredUserName")
 
         }
     
@@ -57,7 +57,7 @@ let [alertProps, setAlertProps] = useState({
     }, []);
     return (
         <div style={mainPageDisplay}>
-            <span style={{ "color": "blue", "text-decoration": "underline", "margin-left": "60vw" }}
+            <span style={{ "color": "blue", "text-decoration": "underline", "margin-left": "60vw","cursor":"pointer" }}
                 onClick={() => {props.history.push('/login') }}>
                 Not {loggedInUser} ? 
             </span>
