@@ -60,7 +60,6 @@ let [alertProps, setAlertProps] = useState({
             <span style={{ "color": "blue", "text-decoration": "underline", "margin-left": "60vw" }}
                 onClick={() => {props.history.push('/login') }}>
                 Not {loggedInUser} ? 
-                Login with a Different ID
             </span>
         <h1>Welcome to this App {loggedInUser} !!</h1>
             <AlertComponent shouldDisplay={alertProps.shouldDisplay}
